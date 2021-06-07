@@ -1,5 +1,5 @@
 <div class="grid grid--no-gutters image-bar image-bar--{{ section.settings.section_height }}">
-  <h3 style="text-align:center">Instagram</h3>
+  <h3 class="text-center">{{section.settings.heading}}</h3>
   {% case section.blocks.size %}
     {% when 1 %}
       {%- assign column_size = '' -%}
@@ -90,6 +90,11 @@
   "class": "index-section index-section--flush",
   "max_blocks": 4,
   "settings": [
+    {
+      "type":"text",
+      "label":"Heading",
+      "id":"heading"
+    },
     {
       "type": "select",
       "id": "section_height",
