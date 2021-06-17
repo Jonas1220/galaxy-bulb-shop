@@ -419,5 +419,12 @@
       "add_to_apple_wallet": "Add to Apple Wallet",
       "qr_image_alt": "QR code — scan to redeem gift card"
     }
+  },
+  "customizations":{
+    "wholesale": {
+      "website":"Business Website",
+      "business_name":"Name of Business",
+      "business_type":"Type of Business"
+    }
   }
 }

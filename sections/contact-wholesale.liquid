@@ -36,18 +36,18 @@
 
           <div class="grid grid--half-gutters">
             <div class="grid__item medium-up--one-half">
-              <label for="{{ formId }}-business-name">Business Name<span aria-hidden="true">*</span></label>
+              <label for="{{ formId }}-business-name">{{'customizations.wholesale.business_name' | t}}<span aria-hidden="true">*</span></label>
               <input type="text" id="{{ formId }}-business-name" name="contact[business-name]">
             </div>
             <div class="grid__item medium-up--one-half">
-              <label for="{{ formId }}-url">Website</label>
+              <label for="{{ formId }}-url">{{'customizations.wholesale.website' | t}}</label>
               <input type="url" id="{{ formId }}-url" name="contact[url]">
             </div>
           </div>
 
           {% unless section.settings.businessTypeValues == blank %}
             {% assign types = section.settings.businessTypeValues | split: ',' %}
-            <label for="{{ formId }}-business-type">Business Type</label>
+            <label for="{{ formId }}-business-type">{{'customizations.wholesale.business_type' | t}}</label>
             <select id="{{ formId }}-business-type">
               {% for type in types %}
                 <option value="{{ type }}">{{type}}</option>
