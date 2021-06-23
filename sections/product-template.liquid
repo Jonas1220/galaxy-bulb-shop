@@ -144,7 +144,8 @@
         <h1 class="product-single__title">{{ product.title }}</h1>
         <script>window.performance.mark('debut:product:title_visible');</script>
         {% unless isAffiliate %}
-        <div>⭐️ ⭐️ ⭐️ ⭐️ ⭐️</div>
+        {% comment %} <div>⭐️ ⭐️ ⭐️ ⭐️ ⭐️</div> {% endcomment %}
+        {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: false %}
         
 
           <div class="product__price">
@@ -295,6 +296,8 @@
           {% include 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product.featured_media %}
         {% endif %}
     </div>
+
+    {% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: false %}
   </div>
 </div>
 
